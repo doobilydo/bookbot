@@ -45,10 +45,11 @@ def num_of_characters(contents):
     for word in words:
         for letter in word:
             l = letter.lower()
-            if l not in num_characters:
-                num_characters[l] = 1
-            else:
-                num_characters[l] += 1
+            if l.isalpha():
+                if l not in num_characters:
+                    num_characters[l] = 1
+                else:
+                    num_characters[l] += 1
     
     return num_characters
 
